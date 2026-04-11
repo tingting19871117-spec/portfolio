@@ -2291,3 +2291,65 @@ a.btn_Resume{
         gap: 15px;
     }
 }
+
+
+
+/* 外層容器 */
+.data-cards-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* 讓三張卡片垂直居中對齊 */
+    gap: 12px;
+    width: 100%;
+    margin: 25px 0;
+}
+
+/* 單張卡片 */
+.data-card {
+    flex: 1;
+    background: #FFFBF6;
+    border: 1px solid #E0E0E0;
+    border-radius: 8px;
+    height: 90px;        /* 縮小高度，讓比例更精緻 */
+    padding: 0 10px;
+    display: flex;
+    align-items: center; /* 讓內容水平排開並垂直居中 */
+    justify-content: space-around;
+}
+
+/* 兩側斷行文字 */
+.card-side-text {
+    font-size: 13px;     /* 根據你的 html font-size 特性，若太小可調至 14px */
+    color: #666;
+    line-height: 1.2;    /* 縮小行高，讓斷行的字靠近一點 */
+    text-align: center;
+    min-width: 4em;      /* 確保有足夠空間換行 */
+}
+
+/* 中間大數字 */
+.card-main-number {
+    display: flex;
+    align-items: baseline;
+    color: #284870;
+    font-weight: bold;
+}
+
+.huge-number {
+    font-size: 30px;     /* 固定大小，避免撐爆 */
+    line-height: 1;
+}
+
+.unit {
+    font-size: 14px;
+}
+
+/* 手機版 RWD */
+@media screen and (max-width: 767px) {
+    .data-cards-container {
+        flex-direction: column;
+    }
+    .data-card {
+        width: 100%;
+        height: 80px;
+    }
+}
