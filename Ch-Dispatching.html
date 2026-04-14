@@ -431,11 +431,10 @@
 
 
             <!--AI-->
-            <div class="data-cards-container">
+            <div class="data-cards-container hover-counter-cards">
                 <div class="data-card">
                     <div class="card-column left">
-                        <span class="label-top">2024年系統上線後</span>
-                        <span class="label-bottom">平均縮短</span>
+                        <span class="label-bottom">2024年系統上線後 平均縮短</span>
                     </div>
                     <div class="card-column center">
                         <span class="counter huge-number" data-target="67">67</span><span class="unit">%</span>
@@ -451,10 +450,7 @@
                         <span class="label-bottom">15分鐘降低為</span>
                     </div>
                     <div class="card-column center">
-                        <span class="counter huge-number" data-target="5">5</span>
-                    </div>
-                    <div class="card-column right">
-                        <span class="label-bottom">分鐘</span>
+                        <span class="counter huge-number" data-target="5" data-random-first="true">5</span><span class="time-unit">分鐘</span>
                     </div>
                 </div>
             </div><!--AI-->
@@ -932,20 +928,42 @@
                     <h2 class="title contents_title">
                         <span>設計原則</span>
                     </h2>
-                    <!--數字--><div class="tag-item">
-                        <span class="icon-circle">1</span>輕量化介面 (Lightweight UI) ：考量到使用者會有到網路速度易延遲的地區工作，我們減少非必要的動畫效果、介面視覺元素和圖片，並確保系統在流量低的狀態下仍能快速下載到派案資訊。                         
-                    </div>        
-                    <div class="tag-item">
-                        <span class="icon-circle">2</span>色彩易讀性：為讓使用者能快速閱讀，我們將提升色彩對比度列為一大重點，透過Stark檢測確保對比度符合 AA/AAA 標準，讓使用者在強光或昏暗環境下，能一眼抓到派案地址與狀態。                                    
-                    </div>
-                    <div class="tag-item">
-                        <span class="icon-circle">3</span>系統化視覺定義 (Design Tokens)：為讓設計師和工程師有明確的用色邏輯和定義可依循，且讓系統易於管理和維護，我們設計了色彩token。                         
-                    </div>
-                    <div class="tag-item">
-                        <span class="icon-circle">4</span>拇指觸摸範圍：為讓使用者能更直覺化、省力的完成派案的流程回報，我將回報按鈕放大，好增加點擊區域，並放置App下方點擊效率最高的位置，好讓使用者行動中也能快速按按鈕。                          
-                    </div>
-                    <div class="tag-item">
-                        <span class="icon-circle">5</span>文字與資訊密度：為降低中高齡使用者的認知負荷，我參考WCAG 2.1無障礙設計和NCC無障礙網頁規範，來設計色彩對比度、字級規劃等以提高閱讀與資訊易讀性。                          
+                    <!--數字--><div class="principles-list">
+                        <div class="principle-item">
+                            <span class="icon-circle">1</span>
+                            <div class="principle-text">
+                                <span class="principle-title">輕量化介面 (Lightweight UI)：</span>
+                                <span class="principle-body">考量到使用者會有到網路速度易延遲的地區工作，我們減少非必要的動畫效果、介面視覺元素和圖片，並確保系統在流量低的狀態下仍能快速下載到派案資訊。</span>
+                            </div>
+                        </div>        
+                        <div class="principle-item">
+                            <span class="icon-circle">2</span>
+                            <div class="principle-text">
+                                <span class="principle-title">色彩易讀性：</span>
+                                <span class="principle-body">為讓使用者能快速閱讀，我們將提升色彩對比度列為一大重點，透過Stark檢測確保對比度符合 AA/AAA 標準，讓使用者在強光或昏暗環境下，能一眼抓到派案地址與狀態。</span>
+                            </div>
+                        </div>
+                        <div class="principle-item">
+                            <span class="icon-circle">3</span>
+                            <div class="principle-text">
+                                <span class="principle-title">系統化視覺定義 (Design Tokens)：</span>
+                                <span class="principle-body">為讓設計師和工程師有明確的用色邏輯和定義可依循，且讓系統易於管理和維護，我們設計了色彩token。</span>
+                            </div>
+                        </div>
+                        <div class="principle-item">
+                            <span class="icon-circle">4</span>
+                            <div class="principle-text">
+                                <span class="principle-title">拇指觸摸範圍：</span>
+                                <span class="principle-body">為讓使用者能更直覺化、省力的完成派案的流程回報，我將回報按鈕放大，好增加點擊區域，並放置App下方點擊效率最高的位置，好讓使用者行動中也能快速按按鈕。</span>
+                            </div>
+                        </div>
+                        <div class="principle-item">
+                            <span class="icon-circle">5</span>
+                            <div class="principle-text">
+                                <span class="principle-title">文字與資訊密度：</span>
+                                <span class="principle-body">為降低中高齡使用者的認知負荷，我參考WCAG 2.1無障礙設計和NCC無障礙網頁規範，來設計色彩對比度、字級規劃等以提高閱讀與資訊易讀性。</span>
+                            </div>
+                        </div>
                     </div><!--數字--><br>   
                     <div class="pic">
                         <a href="https://www.figma.com/board/Oul0gJz3g7ViRuGLWXiXkX/DispatchingViewOnly?node-id=0-1&t=mdbIFENCbRHBOSmT-1" target="_blank" rel="noopener"><img class="lazyload" src="images/img_Dispatching-system.jpg" alt="system"></a>
@@ -1034,29 +1052,29 @@
                         <span>用戶回饋</span>
                     </h2>
                         <!--AI-->
-                        <div class="data-cards-container">
-                            <div class="data-card">
-                                <div class="card-side-text">效率<br>提升</div>
-                                <div class="card-main-number">
-                                    <span class="huge-number">67</span><span class="unit">%</span>
+                        <div class="feedback-cards-container hover-counter-cards">
+                            <div class="feedback-card">
+                                <div class="feedback-card-side-text">效率提升</div>
+                                <div class="feedback-card-main-number">
+                                    <span class="counter feedback-huge-number" data-target="67">67</span><span class="feedback-unit">%</span>
                                 </div>
-                                <div class="card-side-text">服務回<br>應時間</div>
+                                <div class="feedback-card-side-text">服務回應時間</div>
                             </div>
                         
-                            <div class="data-card">
-                                <div class="card-side-text">人力成本節省</div>
-                                <div class="card-main-number">
-                                    <span class="huge-number">200+</span>
+                            <div class="feedback-card">
+                                <div class="feedback-card-side-text">人力成本節省</div>
+                                <div class="feedback-card-main-number">
+                                    <span class="counter feedback-huge-number" data-target="200" data-suffix="+">200+</span>
                                 </div>
-                                <div class="card-side-text">工時<br>節省</div>
+                                <div class="feedback-card-side-text">工時節省</div>
                             </div>
                         
-                            <div class="data-card">
-                                <div class="card-side-text">使用者<br>滿意度</div>
-                                <div class="card-main-number">
-                                    <span class="huge-number">86%</span>
+                            <div class="feedback-card">
+                                <div class="feedback-card-side-text">使用者滿意度</div>
+                                <div class="feedback-card-main-number">
+                                    <span class="counter feedback-huge-number" data-target="86">86</span><span class="feedback-unit">%</span>
                                 </div>
-                                <div class="card-side-text">減輕<br>負擔</div>
+                                <div class="feedback-card-side-text">減輕負擔</div>
                             </div>
                         </div><!--AI-->
                         </div>
@@ -1149,6 +1167,68 @@ $(document).on('click', 'a[href^="#"]', function(event) {
     $('html, body').animate({
         scrollTop: $($.attr(this, 'href')).offset().top
     }, 1000);
+});
+
+$(function() {
+    var $hoverCounterContainers = $('.hover-counter-cards');
+    if (!$hoverCounterContainers.length) return;
+
+    var durationMs = 2000;
+
+    function easeOutCubic(t) {
+        return 1 - Math.pow(1 - t, 3);
+    }
+
+    function animateCounter($counter) {
+        var target = Number($counter.attr('data-target')) || 0;
+        var shouldRandomFirst = $counter.attr('data-random-first') === 'true';
+        var suffix = $counter.attr('data-suffix') || '';
+        var start = null;
+        var previousRafId = $counter.data('rafId');
+
+        if (previousRafId) {
+            cancelAnimationFrame(previousRafId);
+        }
+
+        function tick(ts) {
+            if (!start) start = ts;
+            var elapsed = ts - start;
+            var progress = Math.min(elapsed / durationMs, 1);
+
+            if (shouldRandomFirst && progress < 0.7) {
+                $counter.text(Math.floor(Math.random() * 10) + suffix);
+            } else {
+                var eased = easeOutCubic(progress);
+                var current = Math.round(target * eased);
+                $counter.text(current + suffix);
+            }
+
+            if (progress < 1) {
+                $counter.data('rafId', requestAnimationFrame(tick));
+            } else {
+                $counter.text(target + suffix);
+                $counter.removeData('rafId');
+            }
+        }
+
+        $counter.text('0' + suffix);
+        $counter.data('rafId', requestAnimationFrame(tick));
+    }
+
+    function bindContainerReplay($container) {
+        function startCountersReplay() {
+            $container.find('.counter').each(function() {
+                animateCounter($(this));
+            });
+        }
+
+        // 每次滑入容器都重播；並支援鍵盤 focus 與觸控
+        $container.on('pointerenter mouseenter focusin touchstart', startCountersReplay);
+    }
+
+    $hoverCounterContainers.each(function() {
+        bindContainerReplay($(this));
+    });
 });
 </script>
 
