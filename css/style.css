@@ -531,16 +531,28 @@ section{
 .container_banner .item_banner{
     /*border-radius: 0.769rem;*/
     overflow: hidden;
-    width: 100%;     /* ＡＩ新增 600px */
-    height: 500px;     /* 直接在這裡改為 600px */
-}
-/* ＡＩ新增*/
-.container_banner .item_banner img.pc_block {
     width: 100%;
-    height: 100%;
-    object-fit: cover; /* 讓圖片自動充滿 600px 高度，不變形 */
 }
-/* ＡＩ新增 600px */
+
+.container_banner .item_banner img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Banner image switch: desktop/mobile */
+.container_banner .item_banner .m_block {
+    display: none;
+}
+
+@media screen and (max-width: 767px) {
+    .container_banner .item_banner .pc_block {
+        display: none;
+    }
+    .container_banner .item_banner .m_block {
+        display: block;
+    }
+}
 .section_process{
     text-align: center;
     background-repeat: no-repeat;
@@ -2029,6 +2041,23 @@ a.btn_Resume{
     flex-direction: column;
     justify-content: center;
     white-space: nowrap; /* 核心：防止文字換行 */
+    padding: 0 0.8rem;
+    box-sizing: border-box;
+}
+
+.data-card > .card-column.left {
+    padding-left: 1.5rem;
+    padding-right: 0.8rem;
+}
+
+.data-card > .card-column.center {
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+}
+
+.data-card > .card-column.right {
+    padding-left: 0.8rem;
+    padding-right: 1.5rem;
 }
 
 /* 左右兩側文字：強制 20px */
@@ -2054,7 +2083,9 @@ a.btn_Resume{
     display: flex;
     flex-direction: row;
     align-items: baseline;
-    margin: 0 20px; /* 數字與兩邊文字的間距 */
+    justify-content: flex-start;
+    min-width: 7ch;
+    margin: 0;
 }
 
 /* 核心數字：強制 96px */
@@ -2064,6 +2095,9 @@ a.btn_Resume{
     color: #b08d63; /* 金棕色 */
     line-height: 1;
     font-family: 'Arial', sans-serif;
+    font-variant-numeric: tabular-nums;
+    display: inline-block;
+    min-width: 2ch;
 }
 
 /* 百分比單位 */
@@ -2072,6 +2106,15 @@ a.btn_Resume{
     font-weight: 700;
     color: #b08d63;
     margin-left: 4px;
+    display: inline-block;
+}
+
+.time-unit {
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
+    margin-left: 0.35rem;
+    display: inline-block;
 }
 
 /* RWD 回應式設計 */
@@ -2090,8 +2133,26 @@ a.btn_Resume{
     .huge-number {
         font-size: 72px !important; /* 手機版稍縮小數字防止溢出 */
     }
+    .unit {
+        font-size: 32px;
+    }
+    .time-unit {
+        font-size: 18px;
+    }
     .card-column.left, .card-column.right {
-        font-size: 18px !important;
+        font-size: 14px !important;
+        line-height: 1.35;
+    }
+    .card-column.left span, .card-column.right span {
+        font-size: 14px !important;
+    }
+    .card-column {
+        white-space: normal;
+    }
+    .data-card {
+        height: auto;
+        min-height: 110px;
+        padding: 0.6rem 0.4rem;
     }
 }
 
@@ -2119,6 +2180,37 @@ a.btn_Resume{
     /*font-size: 20px;*/
     font-weight: 700;
     margin-bottom: 10px;
+}
+
+/* Design principles block (930) */
+.principles-list {
+    margin-bottom: 10px;
+}
+
+.principle-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+.principle-item .icon-circle {
+    flex: 0 0 auto;
+    margin-top: 2px;
+}
+
+.principle-text {
+    display: block;
+    color: #333;
+    line-height: 1.6;
+    font-weight: 400;
+}
+
+.principle-title {
+    font-weight: 700;
+}
+
+.principle-body {
+    font-weight: 400;
 }
 
 /* ==========================================================================
@@ -2314,7 +2406,7 @@ a.btn_Resume{
     padding: 0 10px;
     display: flex;
     align-items: center; /* 讓內容水平排開並垂直居中 */
-    justify-content: space-around;
+    justify-content: flex-start;
 }
 
 /* 兩側斷行文字 */
@@ -2351,5 +2443,170 @@ a.btn_Resume{
     .data-card {
         width: 100%;
         height: 80px;
+    }
+}
+
+/* 用戶回饋卡片（1034 區塊專用） */
+.feedback-cards-container {
+    display: flex;
+    align-items: stretch;
+    gap: 12px;
+    width: 100%;
+    margin: 25px 0;
+    padding: 0 1rem;
+    box-sizing: border-box;
+}
+
+.feedback-card {
+    flex: 1 1 0;
+    min-width: 0;
+    background: #FFFBF6;
+    border: 1px solid #E0E0E0;
+    border-radius: 8px;
+    min-height: 190px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0.35rem;
+}
+
+.feedback-card-side-text {
+    font-size: 13px;
+    color: #666;
+    line-height: 1.2;
+    text-align: left;
+    width: 100%;
+    padding: 0 1.5rem;
+    box-sizing: border-box;
+    white-space: normal;
+}
+
+.feedback-card-main-number {
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-start;
+    width: 100%;
+    min-width: 8ch;
+    padding: 0 1.5rem;
+    box-sizing: border-box;
+    color: #284870;
+    font-weight: bold;
+}
+
+.feedback-card-main-number .counter {
+    display: inline-block;
+    min-width: 3ch;
+}
+
+.feedback-card-main-number .counter[data-suffix="+"] {
+    min-width: 4ch;
+}
+
+.feedback-huge-number {
+    font-size: 96px;
+    font-weight: 800;
+    color: #b08d63;
+    line-height: 1;
+    font-family: 'Arial', sans-serif;
+    font-variant-numeric: tabular-nums;
+    display: inline-block;
+    min-width: 2ch;
+}
+
+.feedback-unit {
+    font-size: 48px;
+    font-weight: 700;
+    color: #b08d63;
+    margin-left: 4px;
+    display: inline-block;
+}
+
+@media screen and (max-width: 767px) {
+    .feedback-cards-container {
+        flex-direction: column;
+    }
+
+    .feedback-card {
+        width: 100%;
+        min-height: 140px;
+        padding: 1rem;
+    }
+
+    .feedback-card-main-number {
+        min-width: 7ch;
+        padding: 0 1rem;
+    }
+
+    .feedback-card-side-text {
+        padding: 0 1rem;
+    }
+
+    .feedback-huge-number {
+        font-size: 56px;
+    }
+
+    .feedback-unit {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 600px) {
+    .card-column.center {
+        min-width: 5.5ch;
+    }
+}
+
+/* 手機版防跑版（最終覆蓋） */
+@media (max-width: 767px) {
+    .data-card {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        height: auto;
+        min-height: 150px;
+        padding: 1rem;
+        gap: 0.35rem;
+    }
+
+    .data-card > .card-column.left,
+    .data-card > .card-column.center,
+    .data-card > .card-column.right {
+        width: 100%;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        min-width: 0;
+    }
+
+    .card-column.left,
+    .card-column.right,
+    .card-column.left span,
+    .card-column.right span {
+        font-size: 14px !important;
+        line-height: 1.35;
+    }
+
+    .card-column.center {
+        min-width: 0;
+    }
+
+    .huge-number {
+        font-size: 56px !important;
+    }
+
+    .unit {
+        font-size: 28px;
+    }
+
+    .feedback-card {
+        min-height: 150px;
+    }
+
+    .feedback-card-side-text,
+    .feedback-card-main-number {
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
 }
